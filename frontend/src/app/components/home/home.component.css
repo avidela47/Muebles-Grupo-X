@@ -1,9 +1,7 @@
-.container{
-    
+.container{    
     color: rgb(68, 66, 66);
     border: solid rgba(3, 133, 255, 0) 2px;
-    margin-left: 100px;
-    
+    margin-left: 100px;    
     font-family: "Neuton";
     font-size: 1rem;
     text-align: center;
@@ -12,6 +10,6 @@
 }
 
 .boton{
-    margin-left: 1245px;
+    margin-left: 1258px;
     margin-top: 10px;   
 }
