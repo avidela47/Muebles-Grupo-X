@@ -1,0 +1,28 @@
+<div class="wrapper">
+    <div *ngIf="!loading" class="body">
+        <img class="logo" src="../../../assets/img/register.png" alt="img login">
+        <h3>Registrar Usuario</h3>
+        <div class="form-floating m-2">
+            <input type="text" [(ngModel)] = "name" class="form-control" id="exampleInputName1" placeholder="Ingresa Nombre">
+            <label>Ingresa Nombre</label>
+        </div>
+        <div class="form-floating m-2">
+            <input type="email" [(ngModel)] = "email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Ingresa Email">
+            <label>Ingresa Email</label>
+        </div>
+        <div class="form-floating m-2">
+            <input type="password" [(ngModel)] = "password" class="form-control" id="exampleInputPassword1" placeholder="Ingresa Password">
+            <label>Ingresa Password</label>
+        </div>
+        <div class="form-floating m-2">
+            <input type="password" [(ngModel)] = "confirmPassword" class="form-control" id="exampleInputPassword1" placeholder="Repetir Password">
+            <label>Repetir Password</label>
+        </div>
+        <div class="d-grid gap-2 m-2 mb-3">
+            <button type="button" (click)="adUser()" class="btn btn-primary">Registrar</button>
+        </div>
+        <a routerLink="login">Volver</a>
+    </div>
+    <app-spinner *ngIf="loading"></app-spinner>
+</div>
