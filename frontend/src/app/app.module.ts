@@ -20,6 +20,8 @@ import { SpinnerComponent } from './shared/spinner/spinner.component';
 import { AddTokenInterceptor } from './utils/add-token.interceptor';
 import { CrudComponent } from './components/crud/crud.component';
 import { ProgressBarComponent } from './shared/progress-bar/progress-bar.component';
+import { HomeComponent } from './components/home/home.component';
+import { DetailComponent } from './components/detail/detail.component';
 
 
 @NgModule({
@@ -31,7 +33,9 @@ import { ProgressBarComponent } from './shared/progress-bar/progress-bar.compone
     NavbarComponent,
     SpinnerComponent,
     CrudComponent,
-    ProgressBarComponent,    
+    ProgressBarComponent,
+    HomeComponent,
+    DetailComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,24 @@
+<app-navbar></app-navbar>
+<app-progress-bar *ngIf="loading"></app-progress-bar>
+
+<div class="boton">
+    <button type="button" class="btn btn-success btn-sm" routerLink="/dashboard">Panel Admin</button>
+</div>
+
+<div *ngIf="!loading" class="container row row-cols-1 row-cols-md-2 g-4">
+<div *ngFor="let item of listProduct" class="card mb-4" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="{{ item.image }}" class="img-fluid rounded-start" alt="imagen">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{ item.name }}</h5>
+          <p class="card-text">{{ item.description }}</p>
+          <p class="card-text"><small class="text-muted">{{ item.price | currency }}</small></p>
+          <button type="button" class="btn btn-primary btn-sm" routerLink="/detail/:id">Adquirir</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

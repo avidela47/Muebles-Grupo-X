@@ -9,11 +9,15 @@ import { CrudComponent } from './components/crud/crud.component';
 
 // Guards
 import { AuthGuard } from './utils/auth.guard';
+import { HomeComponent } from './components/home/home.component';
+import { DetailComponent } from './components/detail/detail.component';
 
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'add', component: CrudComponent},
+  { path: 'home', component: HomeComponent},
+  { path: 'detail/:id', component: DetailComponent},
   { path: 'edit/:id', component: CrudComponent},
   { path: 'login', component: LoginComponent },
   { path: 'signIn', component: SignInComponent },
