@@ -6,19 +6,22 @@
 </div>
 
 <div *ngIf="!loading" class="container row row-cols-1 row-cols-md-2 g-4">
-<div *ngFor="let item of listProduct" class="card mb-4" style="max-width: 500px; height: 200px;">
+<div *ngFor="let item of listProduct" class="card mb-4" style="max-width: 500px; height: 200px">
     <div class="row g-0">
       <div class="col-md-4">
-        <img src="{{ item.image }}" class="img-fluid rounded-start" style="max-width: 150px; max-height: 150px" alt="imagen">
+        <img src="{{ item.image }}" class="img-fluid rounded-start" style="max-width: 150px; height: 150px" alt="imagen">
       </div>
       <div class="col-md-8">
         <div class="card-body">
-          <h5 class="card-title">{{ item.name }}</h5>
-          <p class="card-text">{{ item.description }}</p>
-          <h4 class="mb-1 me-1">{{item.price | currency}}</h4>
-          <button type="button" class="btn btn-primary btn-sm" routerLink="/detail/:id">Mas detalle...</button>
+          <h4 class="card-title">{{ item.name }}</h4>
+          <h6 class="card-text">{{ item.description }}</h6>
+          <h5 class="card-text">{{ item.price | currency }}</h5>
+          <button type="button" class="card-button" routerLink="/detail/:id">Ver detalle...</button>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+
+
