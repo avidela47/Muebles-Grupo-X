@@ -22,8 +22,6 @@ import { CrudComponent } from './components/crud/crud.component';
 import { ProgressBarComponent } from './shared/progress-bar/progress-bar.component';
 import { HomeComponent } from './components/home/home.component';
 import { DetailComponent } from './components/detail/detail.component';
-
-
 @NgModule({
   declarations: [
     AppComponent,

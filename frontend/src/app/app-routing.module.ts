@@ -6,11 +6,11 @@ import { LoginComponent } from './components/login/login.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { CrudComponent } from './components/crud/crud.component';
+import { DetailComponent } from './components/detail/detail.component';
 
 // Guards
 import { AuthGuard } from './utils/auth.guard';
 import { HomeComponent } from './components/home/home.component';
-import { DetailComponent } from './components/detail/detail.component';
 
 
 const routes: Routes = [

@@ -3,7 +3,7 @@
 <div *ngIf="!loading" class="row mt-1">
     <div class="col-lg-4 offset-lg-4">
         <div class="card text-white bg-secondary" style="width: 25rem;">
-            <div class="card-header text-center">{{ operacion }} Producto</div>
+            <div class="card-header text-center">{{ operacion }}Producto</div>
             <div class="card-body">
                 <form [formGroup]="form" (ngSubmit)="addProduct()">
                     <select formControlName="category" type="text" class="form-control" placeholder="Ingrese Categoria">
