@@ -4,7 +4,7 @@
 <div *ngIf="!loading" class="container mt-2 text-center">
   <div class="title">
     <h2>Productos</h2>
-    <button type="button" class="btn btn-primary btn-sm" routerLink="/add">Agregar Producto</button>
+    <button type="button" class="button" routerLink="/add">Agregar Producto</button>
   </div>
 
   <table *ngIf="listProduct.length > 0" class="table">
@@ -30,8 +30,8 @@
         <td><img src="{{ item.image }}" alt="imagen"></td>
         <td>{{ item.stock }}</td>
         <td>
-          <button routerLink="/edit/{{item.id}}" type="button" class="btn btn-success btn-sm">Editar</button>
-          <button (click)="deleteProduct(item.id!)" type="button" class="btn btn-danger btn-sm ms-2">Eliminar</button>
+          <button routerLink="/edit/{{item.id}}" type="button" class="btn btn-outline-success btn-sm">Editar</button>
+          <button (click)="deleteProduct(item.id!)" type="button" class="btn btn-outline-danger btn-sm ms-2">Eliminar</button>
         </td>
       </tr>
     </tbody>

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
+import { Product } from '../../interfaces/products';
 
 @Component({
   selector: 'app-detail',
