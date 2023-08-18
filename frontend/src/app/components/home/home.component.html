@@ -16,7 +16,7 @@
           <h4 class="card-title">{{ item.name }}</h4>
           <h6 class="card-text">{{ item.description }}</h6>
           <h5 class="card-text">{{ item.price | currency }}</h5>
-          <button type="button" class="card-button" routerLink="/detail/:id">Ver detalle...</button>
+          <button type="button" class="card-button" routerLink="/detail/{{item.id}}">Ver detalle...</button>
         </div>
       </div>
     </div>

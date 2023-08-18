@@ -1,9 +1,7 @@
-body{
-    background-color: #edf1f5;
-    margin-top:20px;
-}
+
 .card {
     margin-bottom: 30px;
+    position: fixed;
 }
 .card {
     position: relative;
@@ -11,7 +9,7 @@ body{
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
-    background-color: #fff;
+    background-color: #ffffff;
     background-clip: border-box;
     border: 0 solid transparent;
     border-radius: 0;
@@ -27,4 +25,34 @@ body{
 .table-product td{
     border-top: 0px solid #dee2e6 !important;
     color: #728299!important;
+}
+
+.card-title, .card-subtitle{
+    margin-left: 710px;
+}
+
+.white-box{
+    margin-top: 10px;
+    margin-left: -250px;
+   
+}
+img {
+    height: 500px;
+    width: 500px;
+}
+
+.p{
+    color: rgb(130, 190, 247);
+    margin-left: 250px;
+    margin-top: 20px;
+}
+
+.mt-5, .btn, .list-unstyled {
+    margin-left: 250px;
+    margin-top: 20px;
+}
+
+.btn2 {
+    margin-left: 50px;
+    margin-top: 5px;
 }
