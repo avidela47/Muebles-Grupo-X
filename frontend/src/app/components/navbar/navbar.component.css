@@ -1,7 +1,14 @@
 .navbar{
     color: rgb(0, 0, 0);
+    border-bottom: solid 0.5px rgb(53, 52, 52);
 }
 
 .navbar-brand{
     color: rgb(0, 0, 0);
+}
+
+.img{
+    height: 100px;
+    width: 150px;
+    margin: -20px;
 }

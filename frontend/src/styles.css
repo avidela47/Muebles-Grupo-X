@@ -1,7 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+	--rotate-speed: 40;
+	--count: 8; /* Default count, the DOM element should override this */
+	--easeInOutSine: cubic-bezier(0.37, 0, 0.63, 1);
+	--easing: cubic-bezier(0.000, 0.37, 1.000, 0.63);
+}
+
 html,
 body {
-    height: 100%;
+    /*background-image: url(https://img.freepik.com/foto-gratis/estudio-gris-vacio-liso-abstracto-bien-uso-como-fondo-informe-comercial-digital-plantilla-sitio-web-telon-fondo_1258-55967.jpg?w=2000);*/
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .wrapper {
