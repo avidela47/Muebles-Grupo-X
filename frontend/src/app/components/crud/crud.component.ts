@@ -4,6 +4,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Product } from 'src/app/interfaces/products';
 import { ProductService } from 'src/app/services/product.service';
+import { CategoryService } from 'src/app/services/category.service';
+import { Category } from 'src/app/interfaces/category';
 
 @Component({
   selector: 'app-crud',
@@ -11,12 +13,14 @@ import { ProductService } from 'src/app/services/product.service';
   styleUrls: ['./crud.component.css']
 })
 export class CrudComponent implements OnInit {
+  listCategory: Category[] = []
   form: FormGroup;
   loading: boolean = false;
   id: number;
   operacion: string = 'Agregar ';
 
   constructor(private fb: FormBuilder,
+    private _categoryService: CategoryService,
     private _productService: ProductService,
     private router: Router,
     private toastr: ToastrService,
@@ -28,6 +32,7 @@ export class CrudComponent implements OnInit {
       price: [null, Validators.required],
       image: ['', Validators.required],
       stock: [null, Validators.required],
+      
     })
     this.id = Number(aRouter.snapshot.paramMap.get('id'));
   }
@@ -37,8 +42,17 @@ export class CrudComponent implements OnInit {
     if (this.id != 0) {
       this.operacion = 'Editar ';
       this.getProduct(this.id);
+      this.getCategory();
     }
+    this.getCategory();
+    console.log(this.listCategory)
   }
+
+  getCategory() {    
+    this._categoryService.getCategories().subscribe((data: Category[]) => {
+    this.listCategory = data;    
+  })
+}
 
   getProduct(id: number) {
     this.loading = true;
@@ -64,6 +78,7 @@ export class CrudComponent implements OnInit {
       price: this.form.value.price,
       image: this.form.value.image,
       stock: this.form.value.stock,
+      idCategory: this.form.value.idCategory
     }
 
     this.loading = true;

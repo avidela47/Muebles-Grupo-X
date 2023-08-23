@@ -51,11 +51,19 @@ a {
 	color: unset;
 }
 .model-name {
-	font-weight: 500;
-	font-size: 18px;
+	font-weight: 300;
+	font-size: 15px;
 	line-height: 150%;
 	color: #3B2ED0;
 	display: block;
+	margin-left: 20px;
+}
+
+span{
+	font-size: 12px;
+	text-align: center;
+	margin-left: 15px;
+	justify-content: space-around;
 }
 svg {
 	position: absolute;
@@ -288,4 +296,10 @@ li:nth-child(8), li:nth-child(8) .card {
   padding: 8px 15px;
   border-radius: 20px;
 }
+
+.img2 {
+	width: 190px;
+	height: 100px;
+}
+
 

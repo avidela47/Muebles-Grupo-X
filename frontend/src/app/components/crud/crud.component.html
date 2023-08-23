@@ -7,10 +7,7 @@
             <div class="card-body">
                 <form [formGroup]="form" (ngSubmit)="addProduct()">
                     <select formControlName="category" type="text" class="form-control" placeholder="Ingrese Categoria">
-                        <option value="Sillas">Sillas</option>
-                        <option value="Mesas">Mesas</option>
-                        <option value="Vajilla">Vajilla</option>
-                        <option value="Varios">Varios</option>
+                        <option selected="Ingrese Categoria" *ngFor="let item of listCategory" value={{item.name}}>{{item.name}}</option>                        
                         <span *ngIf="form.get('category')?.hasError('required') && form.get('category')?.touched">
                             El campo nombre es requirido
                         </span>
