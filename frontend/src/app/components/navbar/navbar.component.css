@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&display=swap');
+
 .navbar{
     color: rgb(0, 0, 0);
-    border-bottom: solid 0.5px rgb(53, 52, 52);
+    
 }
 
 .navbar-brand{
@@ -8,7 +10,18 @@
 }
 
 .img{
-    height: 100px;
-    width: 150px;
+    height: 85px;
+    width: 120px;
     margin: -20px;
+}
+
+a:hover {
+    color: rgb(83, 43, 226);
+}
+
+.a{
+    font-family: 'Dancing Script', cursive;
+    text-decoration: none;
+    color: gray;
+    margin-left: 10px;
 }

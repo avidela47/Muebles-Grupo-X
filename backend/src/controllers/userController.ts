@@ -58,5 +58,4 @@ export const loginUser = async (req: Request, res: Response) => {
        }, process.env.SECRET_KEY || 'secret');
        
        res.json(token);
-    
 }

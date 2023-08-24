@@ -1,7 +1,7 @@
 .void {
-	margin-top: -120px;
+	margin-top: -83px;
 	width: 90%;
-	height: 580px;
+	height: 696px;
 	position: relative;
 	aspect-ratio: 1 / 1;
 	overflow: hidden;
@@ -51,11 +51,19 @@ a {
 	color: unset;
 }
 .model-name {
-	font-weight: 500;
-	font-size: 18px;
+	font-weight: 200;
+	font-size: 15px;
 	line-height: 150%;
 	color: #3B2ED0;
 	display: block;
+	margin-left: 20px;
+}
+
+span{
+	font-size: 11px;
+	text-align: center;
+	margin-left: 5px;
+	justify-content: space-between;
 }
 svg {
 	position: absolute;
@@ -126,6 +134,7 @@ li:nth-child(8), li:nth-child(8) .card {
 .img{
 	margin-left: -300px;
 }
+
 .second-circle {
 	position: absolute;
 	width: 40%;
@@ -179,7 +188,7 @@ li:nth-child(8), li:nth-child(8) .card {
 .container{
   display: flex;
   justify-content: center;
-  padding-top: 60px;
+  padding-top: 8px;
   overflow: hidden;
 }
 
@@ -285,4 +294,10 @@ li:nth-child(8), li:nth-child(8) .card {
   padding: 8px 15px;
   border-radius: 20px;
 }
+
+.img2 {
+	width: 190px;
+	height: 100px;
+}
+
 
