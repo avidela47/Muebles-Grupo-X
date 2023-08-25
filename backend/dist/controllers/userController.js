@@ -17,11 +17,11 @@ const bcrypt_1 = __importDefault(require("bcrypt"));
 const user_1 = require("../models/user");
 const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
 const newUser = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const { name, email, password } = req.body;
+    const { name, email, password, isSeller } = req.body;
     const user = yield user_1.User.findOne({ where: { email: email } });
     if (user) {
         return res.status(400).json({
-            msg: `El usuario ${email} ya existe`
+            msg: `El usuario ${email} ya existe`,
         });
     }
     const hashedPassword = yield bcrypt_1.default.hash(password, 10);
@@ -29,7 +29,8 @@ const newUser = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         yield user_1.User.create({
             name: name,
             email: email,
-            password: hashedPassword
+            password: hashedPassword,
+            isSeller,
         });
         res.json({
             msg: `Uruario ${name} creado exitosamente!`,
@@ -37,8 +38,8 @@ const newUser = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     }
     catch (error) {
         res.status(400).json({
-            msg: 'Upps ocurrio un error',
-            error
+            msg: "Upps ocurrio un error",
+            error,
         });
     }
 });
@@ -48,18 +49,24 @@ const loginUser = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const user = yield user_1.User.findOne({ where: { email: email } });
     if (!user) {
         return res.status(400).json({
-            msg: `El usuario ${email} no existe`
+            msg: `El usuario ${email} no existe`,
         });
+    }
+    if (user.isSeller) {
+        const token = jsonwebtoken_1.default.sign({
+            email: email,
+        }, process.env.SECRET_KEY || "secret");
+        return res.json(token);
     }
     const passwordValid = yield bcrypt_1.default.compare(password, user.password);
     if (!passwordValid) {
         return res.status(400).json({
-            msg: 'Password incorrecto'
+            msg: "Password incorrecto",
         });
     }
     const token = jsonwebtoken_1.default.sign({
-        email: email
-    }, process.env.SECRET_KEY || 'secret');
+        email: email,
+    }, process.env.SECRET_KEY || "secret");
     res.json(token);
 });
 exports.loginUser = loginUser;

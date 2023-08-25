@@ -6,15 +6,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Product = void 0;
 const sequelize_1 = require("sequelize");
 const connection_1 = __importDefault(require("../db/connection"));
-exports.Product = connection_1.default.define('product', {
+exports.Product = connection_1.default.define('products', {
     id: {
         type: sequelize_1.DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true
-    },
-    category: {
-        type: sequelize_1.DataTypes.STRING,
-        allowNull: false,
     },
     name: {
         type: sequelize_1.DataTypes.STRING,

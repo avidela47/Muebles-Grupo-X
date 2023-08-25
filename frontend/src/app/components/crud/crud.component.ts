@@ -59,7 +59,7 @@ export class CrudComponent implements OnInit {
     this._productService.getProduct(id).subscribe((product: Product) => {
       this.loading = false;
       this.form.patchValue({
-        category: product.category,
+        category: product.idCategory,
         name: product.name,
         description: product.description,
         price: product.price,
@@ -72,7 +72,6 @@ export class CrudComponent implements OnInit {
   addProduct() {
     const product: Product = {
 
-      category: this.form.value.category,
       name: this.form.value.name,
       description: this.form.value.description,
       price: this.form.value.price,

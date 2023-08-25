@@ -13,7 +13,7 @@ export class DetailComponent implements OnInit {
   
   loading: boolean = false;
   id: number;
-  category: string;
+  idCategory: number;
   name: string;
   description: string;
   price: number;
@@ -27,7 +27,7 @@ export class DetailComponent implements OnInit {
     private route: ActivatedRoute,
     private aRouter: ActivatedRoute) {
       this.id = Number(aRouter.snapshot.paramMap.get('id'));
-      this.category = '';
+      this.idCategory = 0;
       this.name= '';
       this.description = '';
       this.price = 0;
@@ -55,7 +55,7 @@ export class DetailComponent implements OnInit {
     this._productService.getProduct(id).subscribe(
       (product: Product) => {
         this.name = product.name;
-        this.category = product.category;
+        this.idCategory = product.idCategory;
         this.description = product.description;
         this.price = product.price;
         this.image = product.image;

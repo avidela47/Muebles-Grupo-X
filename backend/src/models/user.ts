@@ -1,7 +1,7 @@
 import { DataTypes } from "sequelize";
 import sequelize from "../db/connection";
 
-export const User = sequelize.define('user', {
+export const User = sequelize.define('users', {
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
@@ -19,5 +19,9 @@ export const User = sequelize.define('user', {
     password: {
         type: DataTypes.STRING,
         allowNull: false,
-    }
-})
+    },
+    isSeller: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false,
+    },
+});

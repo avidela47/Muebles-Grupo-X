@@ -19,12 +19,12 @@ class Server {
         this.midlewares();
         this.routes();
         this.dbConnect();
-        
+
     }
 
     listen() {
         this.app.listen(this.port, () => {
-            console.log(`Server running on port ${this.port}`);        
+            console.log(`Server running on port ${this.port}`);
         })
     }
 
@@ -42,9 +42,10 @@ class Server {
     async dbConnect() {
         try {
             // await sequelize.sync({ alter:true });
-            await Product.sync({ alter:true })
-            await User.sync({ alter:true });
-            await Category.sync({ alter:true });
+            await Category.sync({ alter: true });
+            await Product.sync({ alter: true })
+            await User.sync({ alter: true });
+            
         } catch (error) {
             console.error('Unable to connect to the database:', error);
         }

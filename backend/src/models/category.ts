@@ -2,7 +2,7 @@ import { DataTypes } from "sequelize";
 import sequelize from "../db/connection";
 import { Product } from "./product";
 
-export const Category = sequelize.define("category", {
+export const Category = sequelize.define("categories", {
   idCategory: {
     type: DataTypes.INTEGER,
     primaryKey: true,

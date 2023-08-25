@@ -48,9 +48,9 @@ class Server {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 // await sequelize.sync({ alter:true });
+                yield category_1.Category.sync({ alter: true });
                 yield product_1.Product.sync({ alter: true });
                 yield user_1.User.sync({ alter: true });
-                yield category_1.Category.sync({ alter: true });
             }
             catch (error) {
                 console.error('Unable to connect to the database:', error);

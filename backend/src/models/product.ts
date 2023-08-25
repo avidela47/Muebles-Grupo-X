@@ -1,15 +1,11 @@
 import { DataTypes } from "sequelize";
 import sequelize from "../db/connection";
 
-export const Product = sequelize.define('product', {
+export const Product = sequelize.define('products', {
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true
-    },
-    category: {
-        type: DataTypes.STRING,
-        allowNull: false,
     },
     name: {
         type: DataTypes.STRING,
